@@ -1,3 +1,4 @@
+
 {
     "spider": "./tvbox.jar",
     "logo": "https://img.freepik.com/free-vector/cute-dolphin-swimming-cartoon-vector-icon-illustration-animal-nature-icon-isolated-flat-vector_138676-12582.jpg?semt=ais_hybrid&w=740&q=80",
@@ -767,6 +768,12 @@
             "type": 0,
             "ua": "okhttp",
             "url": "http://iptv.4666888.xyz/FYTV.txt"
+        },
+        {
+            "name": "🐬俄罗斯源",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://m3u.ch/pl/402fdf5102aacfc997279fd904643392_78d493be9df8cf5d447946793758bfa6.m3u"
         },
         {
             "name": "🐬易发源",
