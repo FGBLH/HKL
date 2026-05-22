@@ -717,11 +717,11 @@
             "ua": "bingcha/1.1 (mianfeifenxiang) "
          },
 	     {
-            "name": "🐬地方港台直播",
+            "name": "🐬电视家",
             "type": 0,
             "playerType": 2,
-            "url": "https://gh-proxy.org/https://github.com/bang359/dsj/raw/main/dsjcs.txt",
-            "ua": "okhttp"
+             "ua": "okhttp",
+			 "url": "https://gh-proxy.org/https://github.com/bang359/dsj/raw/main/dsjcs.txt"
          },
          {
             "name": "🐬地方直播",
@@ -735,12 +735,6 @@
             "ua": "okhttp/5.3.2",
             "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u"
         }, 
-        {
-            "name": "🐬电视家",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/wujiangliu/live-sources/refs/heads/main/电视家.m3u"
-        },
         {
             "name": "🐬裤佬TV",
             "type": 0,
