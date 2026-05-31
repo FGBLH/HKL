@@ -257,6 +257,15 @@
         "成长逆袭"
       ]
     },
+       {
+      "key": "旺旺资源",
+      "name": "🐬旺旺短剧",
+      "type": 1,
+      "api": "https://api.wwzy.tv/api.php/provide/vod/?ac=list",
+      "playUrl": "",
+      "searchable": 1,
+      "quickSearch": 1
+    },
         {
 			"key": "网易云音乐",
 			"name": "🐬网易云｜音乐",
