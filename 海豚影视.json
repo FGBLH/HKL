@@ -288,24 +288,6 @@
       "quickSearch": 0
     },
 	{
-      "key": "pgxdy",
-      "name": "🔞PGX电影",
-      "type": 0,
-      "api": "https://www.pgxdy.com/api/xml.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "zp128",
-      "name": "🔞鲨鱼影视",
-      "type": 0,
-      "api": "https://shayuapi.com/api.php/Seacms/vod/at/xml/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-	{
       "key": "大地采集",
       "name": "🐬大地av｜🔞",
       "type": 0,
