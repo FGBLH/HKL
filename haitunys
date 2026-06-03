@@ -52,9 +52,8 @@
         "api":"csp_ppnix",
         "homePage":"https://fgblh.github.io/uhuj.github.io/ppnix.html"
       },
-    {"key": "ttzy", "name": "🐬天天┃影视", "type": 1, "api": "https://api.1080zyku.com/inc/apijson.php", "searchable": 1, "quickSearch": 1, "filterable": 1},
+      {"key": "ttzy", "name": "🐬天天┃影视(有三级片)🔞", "type": 1, "api": "https://api.1080zyku.com/inc/apijson.php", "searchable": 1, "quickSearch": 1, "filterable": 1},
       {"key": "虎牙资源", "name": "🐬虎牙资源(有三级片)", "type": 1, "api": "https://www.huyaapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
-      {"key": "1080资源库", "name": "🐬1080资源库(有三级片)🔞", "type": 1, "api": "https://api.1080zyku.com/inc/api_mac10.php", "searchable": 1, "quickSearch": 1, "filterable": 1},
      {
       "key": "非凡",
       "name": "🐬非凡影视",
