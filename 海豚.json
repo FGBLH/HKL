@@ -929,6 +929,12 @@
             "url": "http://tv.anbox.ip-ddns.com/live"
         }, 
         {
+            "name": "🐬港台",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://feer-cdn-bp.xpnb.qzz.io/xnkl.txt"
+        },
+	    {
             "name": "🐬国际TV 有🔞",
             "type": 0,
             "ua": "okhttp",
