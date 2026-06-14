@@ -713,8 +713,13 @@
             "type": 0,
             "ua": "okhttp/5.3.2",
             "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u"
-        }, 
+        },  
 	    {
+            "name": "🐬北美长城源",
+            "type": 0,
+            "ua": "okhttp/5.3.2",
+            "url": "https://ha.msbot.dpdns.org/wall.php"
+        }, 
             "name": "🐬多源直播",
             "type": 0,
             "ua": "okhttp/5.3.2",
