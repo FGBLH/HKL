@@ -2306,21 +2306,7 @@
         }
     ],
     "doh": [
-        {
-    "name": "LEO| 弹幕",
-    "key": "leo 弹幕",
-    "type": 3,
-    "api": "csp_DanmakuSpider",
-    "searchable": 1,
-    "jar": "https://gh-proxy.org/https://github.com/Silent1566/CatVodSpider/raw/refs/heads/main/jar/danmu.jar",
-    "ext": {
-        "apiUrl": "LogVar 弹幕 API 端点",
-        "autoPushEnabled": true,
-        "danmakuStyle": "经典模式",
-        "lpAlpha": 0.9
-    }
-   },
-		{
+{
   "name": "弹幕",
   "key": "弹幕豆瓣",
   "type": 3,
