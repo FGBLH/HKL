@@ -195,35 +195,6 @@
         "api":"csp_gy",
         "homePage":"https://fgblh.github.io/uhuj.github.io/观影.html"
       },
-		{
-            "key": "油管so",
-            "name": "🐬油管",
-            "type": 3,
-            "api": "csp_Ytdl",
-            "searchable": 1,
-            "quickSearch": 1,
-            "playerType": 2,
-            "timeout": 30,
-            "filterable": 1,
-            "jar": "https://files.catbox.moe/hmml4f.txt",
-            "ext": {
-                "proxy": "",
-                "youtube_txt": "https://files.catbox.moe/hyph4f.txt"
-         
-            }
-                 
-        },
-       {
-            "key": "华人so",
-            "name": "🐬华人影视[追剧]",
-            "type": 3,
-            "api": "csp_Hua",
-            "jar": "https://files.catbox.moe/hmml4f.txt",
-            "searchable": 1,
-            "quickSearch": 1, 
-            "filterable": 1
-            
-        },
 		{"key": "aidan", "name": "🐬艾旦影视(聚)(有三级片)🔞[追剧]", "type": 1, "api": "https://lovedan.net/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
 		{"key": "ikun", "name": "🐬爱坤┃影视(有三级片)[追剧]", "type": 1, "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/json", "searchable": 1, "quickSearch": 1, "filterable": 1},
         {"key": "U酷資源", "name": "🐬U酷資源(有三级片)[追剧]", "type": 1, "api": "https://api.ukuapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
