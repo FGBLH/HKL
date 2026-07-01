@@ -77,6 +77,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/金牌APP.py"
 		},
 		{
+			"key": "GZ",
+			"name": "🐬瓜子APP.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/瓜子APP.py"
+		},
+		{
 			"key": "nmvm",
 			"name": "🐬农民影视.py",
 			"type": 3,
