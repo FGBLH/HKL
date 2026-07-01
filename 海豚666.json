@@ -413,7 +413,7 @@
 		},
 		{
             "key": "捡的音乐",
-            "name": "🐬so音乐[音乐]",
+            "name": "🐬爱听音乐[音乐]",
             "type": 3,
             "api": "csp_Music1",
             "searchable": 1,
