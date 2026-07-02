@@ -113,6 +113,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/毒舌影视.py"
 		},
 		{
+			"key": "cjjh",
+			"name": "🐬采集聚合.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/采集聚合.py"
+		},
+		{
 			"key": "kf",
 			"name": "🐬咖啡体育直播.py",
 			"type": 3,
