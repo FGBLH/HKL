@@ -209,6 +209,12 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/采集聚合.py"
 		},
+		{
+           "key": "xyzkk",
+           "name": "🐬小鸭子看看.py 有🔞[追剧]",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/小鸭子看看.py"
+        },
          {
 			"key": "fY",
 			"name": "🐬枫叶影院.py(关梯)[追剧]",
