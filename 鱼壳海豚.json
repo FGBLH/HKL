@@ -2198,6 +2198,12 @@
             "url": "https://gh-proxy.org/https://raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt"
         },
 		{
+            "name": "🐬juli",
+            "type": 0,
+            "ua": "okhttp/5.3.2",
+            "url": "https://files.catbox.moe/h3mb5a.txt"
+        },	
+		{
             "name": "🐬小新TV",
             "type": 0,
             "ua": "okhttp/5.3.2",
@@ -2232,12 +2238,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://raw.githubusercontent.com/xJEYDAin/iptv/main/output/all_merged.m3u"
-        },
-	    {
-            "name": "🐬UnifiTV(马来节点)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/unifi.txt"
         },
 	    {
             "name": "🐬裤佬TV",
