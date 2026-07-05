@@ -78,8 +78,7 @@
     "lpWidth": 0.9,
     "lpHeight": 0.85,
     "titleMappingsUrl": "./json/yins.json"
-   }
-  }，
+   }，
 		{
            "key": "ppx",
            "name": "🐬皮皮虾.py",
