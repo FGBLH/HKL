@@ -78,6 +78,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/瓜子APP.py"
 		},
 		{
+			"key": "nnyy",
+			"name": "🐬努努影院.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/GHK/refs/heads/main/py/努努影院.py"
+		},
+		{
 			"key": "nvm",
 			"name": "🐬泥视频.py[追剧]",
 			"type": 3,
