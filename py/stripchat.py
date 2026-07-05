@@ -20,6 +20,7 @@ class Spider(Spider):
 
     def init(self, extend="{}"):
         origin = 'https://zh.stripchat.com'
+        self.host = origin
         self.headers = {
             'Origin': origin,
             'Referer': f"{origin}/",
@@ -177,14 +178,16 @@ class Spider(Spider):
                 proxy_url = f"{self.getProxyUrl()}&url={quote(full_url)}"
                 # 将画质和URL添加到列表中
                 url.append(qn)
+                url.append(proxy_url)
         result = {}
+        result["url"] = url
         result["parse"] = '0'
         result["contentType"] = ''
         result["header"] = self.headers
         return result
 
     def localProxy(self, param):
-        url = unquote(param[''])
+        url = unquote(param['url'])
         data = self.session.get(url, headers=self.headers, timeout=10)
         if data.status_code != 200:
             return [404, "text/plain", ""]
