@@ -562,6 +562,26 @@
             "filterable": 1
         },
 		{
+			"key":"kuwo",
+			"name":"🐬酷我音乐[音乐]",
+			"type":1,
+			"api":"http:\/\/xiaobaibai.feng1210.top\/algorith\/music\/kuwo_source.php",
+			"searchable":1,
+			"quickSearch":1,
+			"playUrl":"json:http:\/\/xiaobaibai.feng1210.top\/\/jiexi.php?data=f73a15dd14154af516e867855a58f417&url=",
+			"changeable":1
+		},
+		{
+			"key":"qqmusic",
+			"name":"🐬QQ音乐[音乐]",
+			"type":1,
+			"api":"http:\/\/xiaobaibai.feng1210.top\/algorith\/music\/qqmusic_source.php\/provide\/vod\/",
+			"searchable":1,
+			"quickSearch":1,
+			"playUrl":"json:http:\/\/xiaobaibai.feng1210.top\/\/jiexi.php?data=f73a15dd14154af516e867855a58f417&url=",
+			"changeable":1
+		},
+		{
 			"key": "shjb",
 			"name": "🐬色播聚合.py｜🔞",
 			"type": 3,
