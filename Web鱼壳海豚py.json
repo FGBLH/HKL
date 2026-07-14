@@ -216,6 +216,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/毒舌影视.py"
 		},
 		{
+           "key": "456dy",
+           "name": "🐬456电影网.py[追剧]",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/456电影网.py"
+        },
+		{
            "key": "qw",
            "name": "🐬七味.py(关梯)[追剧]",
            "type": 3,
