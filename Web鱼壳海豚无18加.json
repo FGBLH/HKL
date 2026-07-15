@@ -76,24 +76,6 @@
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/芒果TV.py"
         },
-		
-		{
-            "name": "弹幕",
-            "key": "弹幕豆瓣",
-            "type": 3,
-            "api": "csp_SecureDanmu",
-            "searchable": 1,
-            "jar": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/danmu-spider-native.jar",
-            "ext": {
-            "apiUrls": [
-            "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick|公益源",
-            "https://logo.saodu.work:8888/87654321|公益源1",
-            "https://dm.ljiaovm.com/luosen|公益源2"
-            ],
-            "titleMappingsUrl": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/yins.json",
-            "filter": "./lib/douban.json"
-         }
-		},
 		{
 			"key": "kf",
 			"name": "🐬咖啡体育直播.py",
