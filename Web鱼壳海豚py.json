@@ -84,6 +84,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/茶杯狐.py"
 		},
 		{
+			"key": "bbzj",
+			"name": "🐬布布追剧.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/布布追剧.py"
+		},
+		{
 			"key": "ww",
 			"name": "🐬哇哇APP.py(关梯)[追剧]",
 			"type": 3,
