@@ -402,7 +402,7 @@
 		},
 		{
            "key": "央视网页",
-           "name": "🐬央视网页直播",
+           "name": "🐬央视网页直播(关梯)",
            "type": 3,
            "jar": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/WvSpider.jar",
            "api": "csp_WvSpider",
