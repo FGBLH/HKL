@@ -165,6 +165,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麒麟影视.py"
 		},
 		{
+			"key": "knvm",
+			"name": "🐬柯南影视.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/柯南影视.py"
+		},
+		{
 			"key": "teys",
 			"name": "🐬太乙影视.py(关梯)[追剧]",
 			"type": 3,
