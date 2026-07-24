@@ -68,7 +68,6 @@ class Spider(Spider):
 
   def _request_with_failover(self, path, timeout=(3, 5)):
     """核心逻辑：逐个域名尝试请求列表/详情，直到成功为止"""
-    # 优先使用上一次成功的域名，若不在第一位则将其调整到前面
     urls_to_try = list(self.dynamic_urls)
     if self.host in urls_to_try:
       urls_to_try.remove(self.host)
@@ -82,7 +81,6 @@ class Spider(Spider):
           f'{clean_domain}{path}' if path.startswith('/') else f'/{path}'
       )
 
-      # 临时构造对应域名的 Header
       headers = {
           **self.headers,
           'Origin': clean_domain,
@@ -94,9 +92,7 @@ class Spider(Spider):
         response = self.session.get(full_url, headers=headers, timeout=timeout)
         if response.status_code == 200:
           data = response.json()
-          # 校验是否拿到了正确的 json 数据
           if isinstance(data, dict):
-            # 成功！更新全局 Host 状态
             if self.host != clean_domain:
               self.log(f'[HOST] 切换可用域名为: {clean_domain}')
               self._update_headers_for_host(clean_domain)
@@ -211,7 +207,7 @@ class Spider(Spider):
     elif status == 'public':
       status_text = '直播中'
     else:
-      status_text = '收费房'
+      status_text = '门票房'
 
     return f'👤 {viewers}人 | {status_text}' if viewers else status_text
 
@@ -255,14 +251,13 @@ class Spider(Spider):
             'total': str(len(videos)),
         }
 
-      # 2. 普通分类列表场景逻辑 (已移除 host_card 保证追加)
+      # 2. 普通分类列表场景逻辑
       limit = 60
       offset = limit * (page_num - 1)
       path = f'/api/front/models?improveTs=false&removeShows=false&limit={limit}&offset={offset}&primaryTag={tid}&sortBy=stripRanking&rcmGrp=A&rbCnGr=true&prxCnGr=false&nic=false'
       if 'tag' in extend and extend['tag']:
         path += f'&filterGroupTags=[["{extend["tag"]}"]]'
 
-      # 使用轮询切域名获取列表数据
       rsp = self._request_with_failover(path)
 
       videos = []
@@ -309,7 +304,6 @@ class Spider(Spider):
 
     try:
       path = f'/api/front/v2/models/username/{username}/cam'
-      # 使用轮询切域名获取详情数据
       rsp = self._request_with_failover(path)
 
       info = rsp.get('cam', {})
@@ -322,7 +316,7 @@ class Spider(Spider):
         self.stripchat_play = f'0 {timestp} {username}'
       flag = self.country_code_to_flag(str(user.get('country', '')).strip())
 
-      remark = '🔴 直播中' if isLive else '⚫ 已下播'
+      remark = '直播中' if isLive else '已下播'
       show = info.get('show') or info.get('groupShowAnnouncement')
       if show:
         startAt = show.get('createdAt') or show.get('startAt')
@@ -423,7 +417,14 @@ class Spider(Spider):
             full_url = f'{lines[i+1]}&psch={psch}&pkey={pkey}&preferredVideoCodec={self.stripchat_preferredVideoCodec}'
             urls.extend([qn, f'{self.getProxyUrl()}&url={quote(full_url)}'])
 
-      return {'url': urls, 'parse': '0', 'position': '0', 'header': headers}
+      # 👈 添加了 danmaku 参数关联弹幕请求接口
+      return {
+          'url': urls,
+          'parse': '0',
+          'position': '0',
+          'header': headers,
+          'danmaku': f'{self.getProxyUrl()}&type=danmu&room={sid}',
+      }
     except Exception as e:
       self.log(f'播放失败 {id}: {e}')
       return {'url': urls, 'parse': 0}
@@ -436,11 +437,60 @@ class Spider(Spider):
     except Exception as e:
       self.log(f'刷新详情失败: {e}')
 
+  # 👈 新增：XML 特殊字符转义处理
+  def xml_escape(self, text):
+    return str(text or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+  # 👈 新增：响应客户端拉取 XML 弹幕的代理处理函数
+  def proxy_danmu(self, room_id):
+    try:
+      room_id = str(room_id)
+      with self.danmu_lock:
+        cache = self.danmu_cache.get(room_id, {})
+        items = cache.get('msg', [])
+
+      xml = [
+          '<?xml version="1.0" encoding="UTF-8"?>',
+          '<i>',
+          '\t<chatserver>chat.stripchat.local</chatserver>',
+          '\t<chatid>88888888</chatid>',
+          '\t<mission>0</mission>',
+          '\t<maxlimit>99999</maxlimit>',
+          '\t<state>0</state>',
+          '\t<real_name>0</real_name>',
+          '\t<source>stripchat</source>',
+      ]
+
+      for i, item in enumerate(items[:100]):
+        text = self.xml_escape(
+            (str(item.get('user', '')) + ': ' if item.get('user') else '')
+            + str(item.get('text', ''))
+        )
+        color = (
+            '16777215'
+            if random.random() > 0.1
+            else str(random.randint(0, 0xFFFFFF))
+        )
+        xml.append(f'\t<d p="{round(i * 1.5, 1)},1,25,{color},0">{text}</d>')
+
+      xml.append('</i>')
+      return [200, 'text/xml', '\n'.join(xml)]
+    except Exception as e:
+      self.log(f'弹幕输出失败: {e}')
+      return [200, 'text/xml', '<?xml version="1.0" encoding="UTF-8"?><i></i>']
+
   def localProxy(self, param):
-    url, type = param['url'], param.get('type', '')
+    type = param.get('type', '')
+
+    # 👈 新增：拦截并返回滚屏 XML 弹幕
+    if type == 'danmu':
+      return self.proxy_danmu(str(param.get('room', '')))
+
+    url = param['url']
     if type == 'media':
       data = self.session_get(url, timeout=(5, 15))
-      return [200, 'video/mp4', data.content]#更改这个可以让羊壳正常播放video/mp4和application/octet-stream
+      return [200, 'video/mp4', data.content]
+      
     rsp = self.session_get(url)
     oldCode, oldtmp, username = self.stripchat_play.rsplit(' ')
     timestp = int(time.time())
@@ -616,6 +666,8 @@ class Spider(Spider):
           cacheMsg = cacheMsg[:30]
         self.danmu_cache[room_id] = {'id': newId, 'msg': cacheMsg}
     if oldId:
+      # 轮询到新弹幕时刷新弹幕文件
+      self.call_local_action('do=refresh&type=danmaku', '刷新弹幕')
       for m in reversed(newMsg):
         self.send_live_danmaku(m)
         time.sleep(0.15)
@@ -714,6 +766,7 @@ class Spider(Spider):
   def get_danmaku_desc(self, room_id):
     cache = self.danmu_cache.get(room_id, {})
     cacheMsg = cache.get('msg', [])
+
     msg = []
     for item in cacheMsg:
       t = self.datetime_utc8(item.get('time'), '%H:%M')
@@ -721,6 +774,7 @@ class Spider(Spider):
       user = str(item.get('user', '')).strip()
       show = f'{t} {user}: {text}' if user else f'{t} {text}'
       msg.append(show)
+
     return '\n'.join(msg)
 
   def get_action_bases(self):
@@ -751,3 +805,4 @@ class Spider(Spider):
         continue
     self.log(f'失败: {log_name}')
     return False
+#弹幕还行
