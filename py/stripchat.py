@@ -207,7 +207,7 @@ class Spider(Spider):
     elif status == 'public':
       status_text = '直播中'
     else:
-      status_text = '门票房'
+      status_text = '收费房'
 
     return f'👤 {viewers}人 | {status_text}' if viewers else status_text
 
