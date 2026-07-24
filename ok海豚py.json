@@ -407,6 +407,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/酷我音乐.py"
 		},
 		{
+			"key": "djyy",
+			"name": "🐬DJ呦呦.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/DJ呦呦.py"
+		},
+		{
 			"key": "shjb",
 			"name": "🐬色播聚合.py｜🔞",
 			"type": 3,
