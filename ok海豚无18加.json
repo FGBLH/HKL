@@ -696,7 +696,13 @@
             "ext": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/Music1.json",
             "jar": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/so.jar",
             "filterable": 1
-        }
+        },
+		{
+			"key": "djyy",
+			"name": "🐬DJ呦呦.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/DJ呦呦.py"
+		}
     ],
     "parses": [ 
 		{
