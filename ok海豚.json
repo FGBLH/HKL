@@ -143,6 +143,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麒麟影视.py"
 		},
 		{
+			"key": "teys",
+			"name": "🐬太乙影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/太乙影视.py"
+		},
+		{
 			"key": "wkvm",
 			"name": "🐬悟空影视.py(关梯)",
 			"type": 3,
