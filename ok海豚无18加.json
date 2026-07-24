@@ -383,6 +383,14 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/聚合直播.py"
 		},
 		{
+           "key": "央视网页",
+           "name": "🐬央视网页直播",
+           "type": 3,
+           "jar": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/WvSpider.jar",
+           "api": "csp_WvSpider",
+           "ext": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/央视直播.js"
+        },
+		{
             "key":"youtube2",
             "name":"🐬油管直播,py",
 			"type": 3,
