@@ -810,6 +810,12 @@
             "filterable": 1
         },
 		{
+			"key": "djyy",
+			"name": "🐬DJ呦呦.py[音乐]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/DJ呦呦.py"
+		},
+		{
 			"key": "shjb",
 			"name": "🐬色播聚合.py｜🔞[成人直播]",
 			"type": 3,
